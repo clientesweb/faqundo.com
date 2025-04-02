@@ -1,7 +1,7 @@
 {
-  "name": "Faqundo Pérez - Viajero, Constructor y Contador de Historias",
-  "short_name": "Faqundo",
-  "description": "Recorriendo Argentina en moto, construyendo mi casa rural y compartiendo experiencias únicas. Viajero, constructor y contador de historias.",
+  "name": "Faqundo Pérez - Viajero en Moto, Constructor y Narrador de Historias Argentinas",
+  "short_name": "Faqundo Pérez",
+  "description": "Recorriendo Argentina en moto, construyendo mi casa rural y compartiendo historias auténticas de personas con pasión.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
@@ -9,7 +9,7 @@
   "theme_color": "#2c3a2f",
   "lang": "es-AR",
   "dir": "ltr",
-  "categories": ["travel", "lifestyle", "entertainment", "video"],
+  "categories": ["travel", "lifestyle", "entertainment", "sports", "outdoors"],
   "icons": [
     {
       "src": "/favicon-16x16.png",
@@ -62,12 +62,17 @@
     {
       "name": "Videos",
       "url": "/#videos",
-      "description": "Ver mis últimos videos"
+      "description": "Ver mis últimos videos de viajes en moto"
     },
     {
       "name": "Podcast",
       "url": "/#podcast",
-      "description": "Escuchar mi podcast"
+      "description": "Escuchar Bitácora Podcast"
+    },
+    {
+      "name": "Libro",
+      "url": "/#book",
+      "description": "Conocer mi libro 'La Patagonia en Dos Ruedas'"
     },
     {
       "name": "Contacto",
