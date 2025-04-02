@@ -426,11 +426,7 @@ export default function Podcast() {
                 <span>Escuchar en Spotify</span>
               </Button>
             </Link>
-            <Link
-              href="https://youtube.com/@bitacora_podcast?si=1zu7vgPPFwL_w2T5"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://youtube.com/@Bitacora_Podcast" target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#FF0000] hover:bg-[#FF0000]/90 text-white flex items-center gap-2">
                 <Youtube className="h-5 w-5" />
                 <span>Ver en YouTube</span>
@@ -580,14 +576,10 @@ export default function Podcast() {
                   </div>
 
                   <div className="mt-6 flex space-x-4">
-                    <Link
-                      href="https://youtube.com/@bitacora_podcast?si=1zu7vgPPFwL_w2T5"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <Link href="https://youtube.com/@Bitacora_Podcast" target="_blank" rel="noopener noreferrer">
                       <Youtube className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
                     </Link>
-                    <Link href="https://www.instagram.com/bitacora_podcast" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://www.instagram.com/bitacora_podcast_" target="_blank" rel="noopener noreferrer">
                       <Instagram className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
                     </Link>
                     <Link
@@ -733,11 +725,7 @@ export default function Podcast() {
               </Tabs>
 
               <div className="mt-8 text-center">
-                <Link
-                  href="https://youtube.com/@bitacora_podcast?si=1zu7vgPPFwL_w2T5"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href="https://youtube.com/@Bitacora_Podcast" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-compass-green text-compass-beige hover:bg-compass-green/90">
                     Ver todos los episodios
                     <ExternalLink className="ml-2 h-4 w-4" />
