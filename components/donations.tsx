@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Copy, Check, Heart, Coffee, Gift, CreditCard, Wallet } from "lucide-react"
+import { Copy, Check, Heart } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -18,7 +18,7 @@ const donationPlatforms = [
     description: "Apóyame a través de Mercado Pago",
     logo: "/images/mercadopago-logo.svg",
     color: "bg-[#009ee3]",
-    link: "https://link.mercadopago.com.ar/faqundoperez",
+    link: "https://mpago.la/facundoemma.mp",
   },
   {
     id: "paypal",
@@ -26,7 +26,7 @@ const donationPlatforms = [
     description: "Contribuye a mis proyectos con PayPal",
     logo: "/images/paypal-logo.png",
     color: "bg-[#0070ba]",
-    link: "https://paypal.me/faqundoperez",
+    link: "https://paypal.me/FacundoPerez947",
   },
   {
     id: "cafecito",
@@ -40,10 +40,10 @@ const donationPlatforms = [
 
 // Opciones de donación
 const donationOptions = [
-  { amount: 5, description: "Un café ☕", icon: <Coffee className="h-5 w-5" /> },
-  { amount: 10, description: "Combustible para la moto ⛽", icon: <Wallet className="h-5 w-5" /> },
-  { amount: 20, description: "Materiales para la casa 🏡", icon: <Gift className="h-5 w-5" /> },
-  { amount: 50, description: "Equipo para videos 🎥", icon: <CreditCard className="h-5 w-5" /> },
+  { amount: 5, description: "Un café ☕" },
+  { amount: 10, description: "Combustible para la moto ⛽" },
+  { amount: 20, description: "Materiales para la casa 🏡" },
+  { amount: 50, description: "Equipo para videos 🎥" },
 ]
 
 // Datos bancarios
@@ -169,9 +169,8 @@ export default function Donations() {
                           onClick={() => setSelectedAmount(option.amount)}
                         >
                           <div className="text-2xl font-bold mb-1">${option.amount}</div>
-                          <div className="flex items-center text-xs text-center">
-                            {option.icon}
-                            <span className="ml-1">{option.description}</span>
+                          <div className="text-xs text-center">
+                            <span>{option.description}</span>
                           </div>
                         </Button>
                       ))}
