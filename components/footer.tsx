@@ -160,7 +160,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-muted-foreground">
                 <MapPin className="h-5 w-5 mr-2 text-accent" />
-                Buenos Aires, Argentina
+                Gouin, Buenos Aires, Argentina
               </li>
               <li className="flex items-center text-muted-foreground">
                 <Phone className="h-5 w-5 mr-2 text-accent" />
