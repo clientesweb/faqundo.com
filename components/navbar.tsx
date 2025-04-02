@@ -133,7 +133,14 @@ export default function Navbar() {
                       ? "text-foreground hover:text-accent hover:bg-accent/10"
                       : "text-white hover:text-accent hover:bg-white/10"
                 }`}
-                onClick={() => setActiveSection(link.href)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  setActiveSection(link.href)
+                  const element = document.querySelector(link.href)
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
               >
                 <span>{link.label}</span>
               </Link>
@@ -163,11 +170,12 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="lg:hidden fixed inset-0 bg-background/95 backdrop-blur-md z-10 flex items-center justify-center overflow-y-auto"
+            className="lg:hidden fixed inset-0 bg-background/95 backdrop-blur-md z-50 flex items-center justify-center overflow-y-auto"
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
+            style={{ top: 0, height: "100vh" }}
           >
             <motion.div
               className="flex flex-col space-y-4 items-center w-full px-4 py-8 max-h-screen"
@@ -188,6 +196,13 @@ export default function Navbar() {
                       onClick={() => {
                         setIsOpen(false)
                         setActiveSection(link.href)
+                        // Pequeño retraso para asegurar que el menú se cierre antes de desplazarse
+                        setTimeout(() => {
+                          const element = document.querySelector(link.href)
+                          if (element) {
+                            element.scrollIntoView({ behavior: "smooth" })
+                          }
+                        }, 100)
                       }}
                     >
                       <span className="text-base md:text-lg font-medium">{link.label}</span>
