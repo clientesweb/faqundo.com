@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { Youtube, Instagram, AirplayIcon as Spotify, TwitterIcon as TikTok, Mail } from "lucide-react"
+import { Youtube, Instagram, AirplayIcon as Spotify, Mail } from "lucide-react"
 import { motion } from "framer-motion"
+import { TikTokIcon } from "./icons/tiktok-icon"
 
 interface SocialLinksProps {
   className?: string
@@ -13,7 +14,7 @@ export default function SocialLinks({ className = "", iconColor = "currentColor"
   const socialLinks = [
     {
       href: "https://www.tiktok.com/@faquperez",
-      icon: TikTok,
+      icon: TikTokIcon,
       label: "TikTok",
       delay: 0,
     },
