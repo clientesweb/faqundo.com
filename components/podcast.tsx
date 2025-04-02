@@ -9,17 +9,18 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
-  ExternalLink,
-  Play,
-  Headphones,
-  Youtube,
-  AirplayIcon as Spotify,
-  Instagram,
-  Volume2,
-  VolumeX,
-  Pause,
-} from "lucide-react"
-import { TikTokIcon } from "./icons/tiktok-icon"
+  FontAwesomeIcon,
+  faYoutube,
+  faInstagram,
+  faSpotify,
+  faTiktok,
+  faPlay,
+  faPause,
+  faVolumeUp,
+  faVolumeMute,
+  faExternalLinkAlt,
+  faHeadphones,
+} from "./icons/font-awesome-icons"
 
 interface PodcastEpisode {
   id: string
@@ -422,13 +423,13 @@ export default function Podcast() {
           >
             <Link href="https://open.spotify.com/show/5wN4BV8WeAtgH8rcy0hePR" target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#1DB954] hover:bg-[#1DB954]/90 text-white flex items-center gap-2">
-                <Spotify className="h-5 w-5" />
+                <FontAwesomeIcon icon={faSpotify} className="h-5 w-5" />
                 <span>Escuchar en Spotify</span>
               </Button>
             </Link>
             <Link href="https://youtube.com/@Bitacora_Podcast" target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#FF0000] hover:bg-[#FF0000]/90 text-white flex items-center gap-2">
-                <Youtube className="h-5 w-5" />
+                <FontAwesomeIcon icon={faYoutube} className="h-5 w-5" />
                 <span>Ver en YouTube</span>
               </Button>
             </Link>
@@ -488,7 +489,7 @@ export default function Podcast() {
                   onClick={toggleMute}
                   className="border-compass-green text-compass-green hover:bg-compass-green/10"
                 >
-                  {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+                  <FontAwesomeIcon icon={isMuted ? faVolumeMute : faVolumeUp} className="h-4 w-4" />
                 </Button>
                 <Button
                   variant="outline"
@@ -496,7 +497,7 @@ export default function Podcast() {
                   onClick={togglePlay}
                   className="border-compass-green text-compass-green hover:bg-compass-green/10"
                 >
-                  {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+                  <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} className="h-4 w-4" />
                 </Button>
               </div>
             </div>
@@ -525,13 +526,13 @@ export default function Podcast() {
             <div className="flex gap-3">
               <Link href={selectedEpisode.youtubeUrl} target="_blank" rel="noopener noreferrer">
                 <Button className="bg-[#FF0000] hover:bg-[#FF0000]/90 text-white">
-                  <Youtube className="mr-2 h-4 w-4" />
+                  <FontAwesomeIcon icon={faYoutube} className="mr-2 h-4 w-4" />
                   Ver en YouTube
                 </Button>
               </Link>
               <Link href={selectedEpisode.spotifyUrl} target="_blank" rel="noopener noreferrer">
                 <Button className="bg-[#1DB954] hover:bg-[#1DB954]/90 text-white">
-                  <Spotify className="mr-2 h-4 w-4" />
+                  <FontAwesomeIcon icon={faSpotify} className="mr-2 h-4 w-4" />
                   Escuchar en Spotify
                 </Button>
               </Link>
@@ -566,31 +567,43 @@ export default function Podcast() {
 
                   <div className="flex flex-col space-y-3">
                     <div className="flex items-center space-x-2 text-compass-green/80">
-                      <Headphones className="h-5 w-5 text-compass-green" />
+                      <FontAwesomeIcon icon={faHeadphones} className="h-5 w-5 text-compass-green" />
                       <span>Episodios: 24</span>
                     </div>
                     <div className="flex items-center space-x-2 text-compass-green/80">
-                      <Play className="h-5 w-5 text-compass-green" />
+                      <FontAwesomeIcon icon={faPlay} className="h-5 w-5 text-compass-green" />
                       <span>Duración promedio: 45 min</span>
                     </div>
                   </div>
 
                   <div className="mt-6 flex space-x-4">
                     <Link href="https://youtube.com/@Bitacora_Podcast" target="_blank" rel="noopener noreferrer">
-                      <Youtube className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
+                      <FontAwesomeIcon
+                        icon={faYoutube}
+                        className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors"
+                      />
                     </Link>
                     <Link href="https://www.instagram.com/bitacora_podcast_" target="_blank" rel="noopener noreferrer">
-                      <Instagram className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors"
+                      />
                     </Link>
                     <Link
                       href="https://open.spotify.com/show/5wN4BV8WeAtgH8rcy0hePR"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Spotify className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
+                      <FontAwesomeIcon
+                        icon={faSpotify}
+                        className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors"
+                      />
                     </Link>
                     <Link href="https://www.tiktok.com/@bitacora_podcast" target="_blank" rel="noopener noreferrer">
-                      <TikTokIcon className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
+                      <FontAwesomeIcon
+                        icon={faTiktok}
+                        className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors"
+                      />
                     </Link>
                   </div>
                 </div>
@@ -637,7 +650,7 @@ export default function Podcast() {
                               />
                               <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                                 <div className="w-12 h-12 rounded-full bg-compass-green/90 flex items-center justify-center">
-                                  <Play className="h-5 w-5 text-white ml-1" />
+                                  <FontAwesomeIcon icon={faPlay} className="h-5 w-5 text-white ml-1" />
                                 </div>
                               </div>
                             </div>
@@ -660,7 +673,7 @@ export default function Podcast() {
                                       size="sm"
                                       className="flex items-center gap-1 border-compass-green/40 text-compass-green hover:bg-compass-green/10 text-xs md:text-sm py-1 h-8"
                                     >
-                                      <Spotify className="h-3 w-3 md:h-4 md:w-4" />
+                                      <FontAwesomeIcon icon={faSpotify} className="h-3 w-3 md:h-4 md:w-4" />
                                       <span className="hidden sm:inline">Spotify</span>
                                     </Button>
                                   </Link>
@@ -670,7 +683,7 @@ export default function Podcast() {
                                       size="sm"
                                       className="flex items-center gap-1 border-compass-green/40 text-compass-green hover:bg-compass-green/10 text-xs md:text-sm py-1 h-8"
                                     >
-                                      <Youtube className="h-3 w-3 md:h-4 md:w-4" />
+                                      <FontAwesomeIcon icon={faYoutube} className="h-3 w-3 md:h-4 md:w-4" />
                                       <span className="hidden sm:inline">YouTube</span>
                                     </Button>
                                   </Link>
@@ -703,7 +716,7 @@ export default function Podcast() {
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
                                 <div className="w-12 h-12 rounded-full bg-compass-green/90 flex items-center justify-center">
-                                  <Play className="h-5 w-5 text-white ml-1" />
+                                  <FontAwesomeIcon icon={faPlay} className="h-5 w-5 text-white ml-1" />
                                 </div>
                               </div>
                               <div className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-full">
@@ -728,7 +741,7 @@ export default function Podcast() {
                 <Link href="https://youtube.com/@Bitacora_Podcast" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-compass-green text-compass-beige hover:bg-compass-green/90">
                     Ver todos los episodios
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                    <FontAwesomeIcon icon={faExternalLinkAlt} className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
