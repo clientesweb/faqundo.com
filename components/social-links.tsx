@@ -1,9 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Youtube, Instagram, AirplayIcon as Spotify, Mail } from "lucide-react"
 import { motion } from "framer-motion"
-import { TikTokIcon } from "./icons/tiktok-icon"
+import { FontAwesomeIcon, faYoutube, faInstagram, faSpotify, faTiktok, faEnvelope } from "./icons/font-awesome-icons"
 
 interface SocialLinksProps {
   className?: string
@@ -14,31 +13,31 @@ export default function SocialLinks({ className = "", iconColor = "currentColor"
   const socialLinks = [
     {
       href: "https://www.tiktok.com/@faquperez",
-      icon: TikTokIcon,
+      icon: faTiktok,
       label: "TikTok",
       delay: 0,
     },
     {
       href: "https://www.instagram.com/faqu_perez",
-      icon: Instagram,
+      icon: faInstagram,
       label: "Instagram",
       delay: 0.1,
     },
     {
       href: "https://www.youtube.com/@faqundoperez",
-      icon: Youtube,
+      icon: faYoutube,
       label: "YouTube",
       delay: 0.2,
     },
     {
       href: "https://open.spotify.com/show/5wN4BV8WeAtgH8rcy0hePR",
-      icon: Spotify,
+      icon: faSpotify,
       label: "Spotify",
       delay: 0.3,
     },
     {
       href: "mailto:contactofeperez@gmail.com",
-      icon: Mail,
+      icon: faEnvelope,
       label: "Email",
       delay: 0.4,
     },
@@ -71,7 +70,7 @@ export default function SocialLinks({ className = "", iconColor = "currentColor"
                       : "hover:bg-accent/20"
             }`}
           >
-            <social.icon className="h-6 w-6 md:h-7 md:w-7" style={{ color: iconColor }} />
+            <FontAwesomeIcon icon={social.icon} className="h-6 w-6 md:h-7 md:w-7" style={{ color: iconColor }} />
           </Link>
         </motion.div>
       ))}
