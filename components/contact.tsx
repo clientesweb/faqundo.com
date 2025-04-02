@@ -119,7 +119,7 @@ Mensaje: ${formData.message}
                 <MapPinned className="h-6 w-6 text-secondary mt-1" />
                 <div>
                   <h4 className="font-bold">Ubicación</h4>
-                  <p className="text-muted-foreground">Buenos Aires, Argentina</p>
+                  <p className="text-muted-foreground">Gouin, Buenos Aires, Argentina</p>
                 </div>
               </motion.div>
 
