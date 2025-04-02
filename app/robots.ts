@@ -5,9 +5,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/private/", "/admin/"],
+      disallow: ["/private/", "/admin/", "/_next/"],
     },
     sitemap: "https://faqundoperez.com/sitemap.xml",
+    host: "https://faqundoperez.com",
   }
 }
 
