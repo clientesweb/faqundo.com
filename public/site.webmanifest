@@ -1,7 +1,7 @@
 {
-  "name": "Facu Pérez - Viajero, Constructor y Contador de Historias",
-  "short_name": "Facu Pérez",
-  "description": "Recorriendo Argentina en moto y compartiendo experiencias únicas.",
+  "name": "Faqundo Pérez - Viajero en Moto, Constructor y Narrador de Historias Argentinas",
+  "short_name": "Faqundo Pérez",
+  "description": "Recorriendo Argentina en moto, construyendo mi casa rural y compartiendo historias auténticas de personas con pasión.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -18,6 +18,8 @@
   "background_color": "#d8d0b8",
   "display": "standalone",
   "start_url": "/",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "lang": "es-AR",
+  "categories": ["travel", "lifestyle", "entertainment", "sports", "outdoors"]
 }
 
