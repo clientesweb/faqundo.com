@@ -3,8 +3,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Youtube, Instagram, AirplayIcon as Spotify, Mail, MapPin, Phone } from "lucide-react"
-import { TikTokIcon } from "./icons/tiktok-icon"
+import {
+  FontAwesomeIcon,
+  faYoutube,
+  faInstagram,
+  faSpotify,
+  faTiktok,
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhone,
+} from "./icons/font-awesome-icons"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -60,7 +68,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="social-icon-btn youtube-icon"
               >
-                <Youtube className="h-5 w-5" />
+                <FontAwesomeIcon icon={faYoutube} className="h-5 w-5" />
               </Link>
               <Link
                 href="https://www.instagram.com/faqu_perez"
@@ -68,7 +76,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="social-icon-btn instagram-icon"
               >
-                <Instagram className="h-5 w-5" />
+                <FontAwesomeIcon icon={faInstagram} className="h-5 w-5" />
               </Link>
               <Link
                 href="https://open.spotify.com/show/5wN4BV8WeAtgH8rcy0hePR"
@@ -76,7 +84,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="social-icon-btn spotify-icon"
               >
-                <Spotify className="h-5 w-5" />
+                <FontAwesomeIcon icon={faSpotify} className="h-5 w-5" />
               </Link>
               <Link
                 href="https://www.tiktok.com/@faquperez"
@@ -84,7 +92,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="social-icon-btn tiktok-icon"
               >
-                <TikTokIcon className="h-5 w-5" />
+                <FontAwesomeIcon icon={faTiktok} className="h-5 w-5" />
               </Link>
             </div>
 
@@ -154,17 +162,17 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-center text-muted-foreground">
-                <Mail className="h-5 w-5 mr-2 text-accent" />
+                <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5 mr-2 text-accent" />
                 <a href="mailto:contactofeperez@gmail.com" className="hover:text-accent transition-colors">
                   contactofeperez@gmail.com
                 </a>
               </li>
               <li className="flex items-center text-muted-foreground">
-                <MapPin className="h-5 w-5 mr-2 text-accent" />
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="h-5 w-5 mr-2 text-accent" />
                 Gouin, Buenos Aires, Argentina
               </li>
               <li className="flex items-center text-muted-foreground">
-                <Phone className="h-5 w-5 mr-2 text-accent" />
+                <FontAwesomeIcon icon={faPhone} className="h-5 w-5 mr-2 text-accent" />
                 Redes sociales
               </li>
               <li className="text-muted-foreground mt-4">
@@ -175,7 +183,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-block bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors flex items-center"
                 >
-                  <Youtube className="h-5 w-5 mr-2" />
+                  <FontAwesomeIcon icon={faYoutube} className="h-5 w-5 mr-2" />
                   YouTube
                 </a>
               </li>
