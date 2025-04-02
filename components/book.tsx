@@ -47,8 +47,15 @@ export default function Book() {
 
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Button className="bg-compass-beige text-compass-green hover:bg-compass-beige/90 group text-sm md:text-base py-2 px-4 md:py-3 md:px-6">
-                <span>Comprar Ahora</span>
-                <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <a
+                  href="https://a.co/d/2irFtsV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <span>Comprar Ahora</span>
+                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               <Button
                 variant="outline"
