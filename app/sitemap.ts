@@ -1,43 +1,61 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const baseUrl = "https://faqundoperez.com"
+  const currentDate = new Date()
+
+  // Páginas principales
+  const routes = [
     {
-      url: "https://faqundoperez.com",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
       priority: 1,
     },
     {
-      url: "https://faqundoperez.com/#about",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      url: `${baseUrl}/#about`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
-      url: "https://faqundoperez.com/#videos",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      url: `${baseUrl}/#videos`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
-      url: "https://faqundoperez.com/#podcast",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      url: `${baseUrl}/#podcast`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
-      url: "https://faqundoperez.com/#book",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      url: `${baseUrl}/#book`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
-      url: "https://faqundoperez.com/#contact",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
+      url: `${baseUrl}/#contact`,
+      lastModified: currentDate,
+      changeFrequency: "yearly" as const,
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/#donations`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/#gallery`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
   ]
+
+  return routes
 }
 
