@@ -5,19 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
-import {
-  Menu,
-  X,
-  User,
-  Video,
-  Headphones,
-  Book,
-  MessageSquare,
-  Youtube,
-  Instagram,
-  AirplayIcon as Spotify,
-  TwitterIcon as TikTok,
-} from "lucide-react"
+import { Menu, X, Youtube, Instagram, AirplayIcon as Spotify, TwitterIcon as TikTok } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "./theme-toggle"
 
@@ -58,11 +46,11 @@ export default function Navbar() {
 
   // Actualizar el array de enlaces de navegación
   const navLinks = [
-    { href: "#about", label: "Sobre Mí", icon: User },
-    { href: "#videos", label: "Videos", icon: Video },
-    { href: "#podcast", label: "Podcast", icon: Headphones },
-    { href: "#book", label: "Libro", icon: Book },
-    { href: "#contact", label: "Contacto", icon: MessageSquare },
+    { href: "#about", label: "Sobre Mí" },
+    { href: "#videos", label: "Videos" },
+    { href: "#podcast", label: "Podcast" },
+    { href: "#book", label: "Libro" },
+    { href: "#contact", label: "Contacto" },
   ]
 
   const navVariants = {
@@ -146,7 +134,6 @@ export default function Navbar() {
                 }`}
                 onClick={() => setActiveSection(link.href)}
               >
-                <link.icon className="h-4 w-4 mr-2" />
                 <span>{link.label}</span>
               </Link>
             </motion.div>
@@ -202,7 +189,6 @@ export default function Navbar() {
                         setActiveSection(link.href)
                       }}
                     >
-                      <link.icon className="h-5 w-5" />
                       <span className="text-base md:text-lg font-medium">{link.label}</span>
                     </Link>
                   </motion.div>
