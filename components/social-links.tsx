@@ -12,7 +12,7 @@ interface SocialLinksProps {
 export default function SocialLinks({ className = "", iconColor = "currentColor" }: SocialLinksProps) {
   const socialLinks = [
     {
-      href: "https://www.tiktok.com/@faqu_perez",
+      href: "https://www.tiktok.com/@faquperez",
       icon: TikTok,
       label: "TikTok",
       delay: 0,
