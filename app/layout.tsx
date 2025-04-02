@@ -4,6 +4,7 @@ import { Manrope, Playfair_Display, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import JsonLd from "./jsonld"
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -24,28 +25,32 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://faqundoperez.com"),
   title: {
-    default: "Faqundo | Viajero, Constructor y Contador de Historias",
-    template: "%s | Faqundo",
+    default: "Faqundo Pérez | Viajero en Moto, Constructor y Narrador de Historias Argentinas",
+    template: "%s | Faqundo Pérez - Aventurero Argentino",
   },
   description:
-    "Recorriendo Argentina en moto, construyendo mi casa rural y compartiendo experiencias únicas. Viajero, constructor y contador de historias.",
+    "Acompáñame en mi viaje por Argentina en mi Royal Enfield Himalayan, descubriendo paisajes impresionantes, construyendo mi casa rural sustentable y compartiendo historias auténticas de personas con pasión. Bitácora Podcast, videos de viajes y más.",
   keywords: [
-    "viajes en moto",
-    "argentina",
-    "youtube",
-    "construcción rural",
-    "aventuras",
-    "historias",
-    "bitácora podcast",
-    "facu perez",
-    "royal enfield",
-    "patagonia",
-    "viajero",
-    "storyteller",
+    "viajes en moto Argentina",
+    "Royal Enfield Himalayan",
+    "construcción sustentable",
+    "casa rural autosuficiente",
+    "Patagonia en moto",
+    "Ruta 40",
+    "Bitácora Podcast",
+    "historias argentinas",
+    "oficios tradicionales",
+    "YouTuber argentino",
+    "Faqundo Pérez",
+    "aventuras en moto",
+    "vida rural",
+    "bioconstrucción",
+    "Gouin Buenos Aires",
+    "viajero argentino",
   ],
-  authors: [{ name: "Faqundo" }],
-  creator: "Faqundo",
-  publisher: "Faqundo",
+  authors: [{ name: "Faqundo Pérez", url: "https://faqundoperez.com" }],
+  creator: "Faqundo Pérez",
+  publisher: "Faqundo Pérez",
   formatDetection: {
     email: false,
     address: false,
@@ -56,24 +61,28 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://faqundoperez.com",
-    title: "Faqundo | Viajero, Constructor y Contador de Historias",
-    description: "Recorriendo Argentina en moto y compartiendo experiencias únicas.",
-    siteName: "Faqundo",
+    title: "Faqundo Pérez | Recorriendo Argentina en Moto",
+    description:
+      "Descubriendo paisajes, construyendo sueños y compartiendo experiencias únicas en mi Royal Enfield Himalayan por toda Argentina.",
+    siteName: "Faqundo Pérez",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/og-image.jpg-HzYqcwNFeVHg5rtmpIr7EPvDQIwAJp.jpeg",
         width: 1200,
         height: 630,
-        alt: "Faqundo - Viajero en moto por Argentina",
+        alt: "Faqundo Pérez con su Royal Enfield Himalayan recorriendo Argentina",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Faqundo | Viajero, Constructor y Contador de Historias",
-    description: "Recorriendo Argentina en moto y compartiendo experiencias únicas.",
-    images: ["/images/og-image.jpg"],
-    creator: "@facu_perez",
+    title: "Faqundo Pérez | Recorriendo Argentina en Moto",
+    description:
+      "Descubriendo paisajes, construyendo sueños y compartiendo experiencias únicas en mi Royal Enfield Himalayan por toda Argentina.",
+    images: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/og-image.jpg-HzYqcwNFeVHg5rtmpIr7EPvDQIwAJp.jpeg",
+    ],
+    creator: "@faqu_perez",
   },
   robots: {
     index: true,
@@ -109,7 +118,19 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/manifest.json",
-    generator: 'v0.dev'
+  verification: {
+    google: "google-site-verification-code", // Reemplazar con tu código real cuando lo tengas
+  },
+  other: {
+    "msapplication-TileColor": "#2c3a2f",
+    "theme-color": "#d8d0b8",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "og:locale:alternate": "en_US",
+    "twitter:app:id:iphone": "",
+    "twitter:app:id:ipad": "",
+    "twitter:app:id:googleplay": "",
+  },
 }
 
 export const viewport: Viewport = {
@@ -135,6 +156,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script src="/sw-register.js" defer></script>
+        <JsonLd />
       </head>
       <body className={`${manrope.variable} ${playfairDisplay.variable} ${jetbrainsMono.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
@@ -146,6 +168,3 @@ export default function RootLayout({
   )
 }
 
-
-
-import './globals.css'
