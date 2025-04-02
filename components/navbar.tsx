@@ -5,10 +5,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
-import { Menu, X, Youtube, Instagram, AirplayIcon as Spotify } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "./theme-toggle"
-import { TikTokIcon } from "./icons/tiktok-icon"
+import { FontAwesomeIcon, faYoutube, faInstagram, faSpotify, faTiktok } from "./icons/font-awesome-icons"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -206,7 +206,7 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   className="social-icon-btn youtube-icon"
                 >
-                  <Youtube className="h-6 w-6" />
+                  <FontAwesomeIcon icon={faYoutube} className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://www.instagram.com/faqu_perez"
@@ -214,7 +214,7 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   className="social-icon-btn instagram-icon"
                 >
-                  <Instagram className="h-6 w-6" />
+                  <FontAwesomeIcon icon={faInstagram} className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://open.spotify.com/show/5wN4BV8WeAtgH8rcy0hePR"
@@ -222,7 +222,7 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   className="social-icon-btn spotify-icon"
                 >
-                  <Spotify className="h-6 w-6" />
+                  <FontAwesomeIcon icon={faSpotify} className="h-6 w-6" />
                 </Link>
                 <Link
                   href="https://www.tiktok.com/@faquperez"
@@ -230,7 +230,7 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   className="social-icon-btn tiktok-icon"
                 >
-                  <TikTokIcon className="h-6 w-6" />
+                  <FontAwesomeIcon icon={faTiktok} className="h-6 w-6" />
                 </Link>
               </motion.div>
 
