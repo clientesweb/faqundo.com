@@ -3,7 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Youtube, Instagram, AirplayIcon as Spotify, TwitterIcon as TikTok, Mail, MapPin, Phone } from "lucide-react"
+import { Youtube, Instagram, AirplayIcon as Spotify, Mail, MapPin, Phone } from "lucide-react"
+import { TikTokIcon } from "./icons/tiktok-icon"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -83,7 +84,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="social-icon-btn tiktok-icon"
               >
-                <TikTok className="h-5 w-5" />
+                <TikTokIcon className="h-5 w-5" />
               </Link>
             </div>
 
