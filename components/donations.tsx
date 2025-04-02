@@ -18,7 +18,7 @@ const donationPlatforms = [
     description: "Apóyame a través de Mercado Pago",
     logo: "/images/mercadopago-logo.svg",
     color: "bg-[#009ee3]",
-    link: "https://mpago.la/facundoemma.mp",
+    link: "https://link.mercadopago.com.ar/faqundoperez",
   },
   {
     id: "paypal",
@@ -48,10 +48,11 @@ const donationOptions = [
 
 // Datos bancarios
 const bankData = {
-  alias: "faqundo.perez",
-  cvu: "0000003100000000000000",
-  accountHolder: "Facundo Pérez",
+  alias: "facundoemma.mp",
+  cvu: "0000003100041359482677",
+  accountHolder: "Facundo Emmamuel Perez",
   bank: "Mercado Pago",
+  cuit: "20400080942",
 }
 
 export default function Donations() {
@@ -242,6 +243,11 @@ export default function Donations() {
                       <div className="p-4 bg-muted rounded-lg">
                         <p className="text-sm text-muted-foreground mb-1">Banco</p>
                         <p className="font-medium">{bankData.bank}</p>
+                      </div>
+
+                      <div className="p-4 bg-muted rounded-lg">
+                        <p className="text-sm text-muted-foreground mb-1">CUIT/CUIL</p>
+                        <p className="font-medium">{bankData.cuit}</p>
                       </div>
                     </div>
 
