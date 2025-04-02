@@ -14,12 +14,12 @@ import {
   Headphones,
   Youtube,
   AirplayIcon as Spotify,
-  TwitterIcon as TikTok,
   Instagram,
   Volume2,
   VolumeX,
   Pause,
 } from "lucide-react"
+import { TikTokIcon } from "./icons/tiktok-icon"
 
 interface PodcastEpisode {
   id: string
@@ -590,7 +590,7 @@ export default function Podcast() {
                       <Spotify className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
                     </Link>
                     <Link href="https://www.tiktok.com/@bitacora_podcast" target="_blank" rel="noopener noreferrer">
-                      <TikTok className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
+                      <TikTokIcon className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors" />
                     </Link>
                   </div>
                 </div>
