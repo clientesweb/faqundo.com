@@ -5,9 +5,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
-import { Menu, X, Youtube, Instagram, AirplayIcon as Spotify, TwitterIcon as TikTok } from "lucide-react"
+import { Menu, X, Youtube, Instagram, AirplayIcon as Spotify } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "./theme-toggle"
+import { TikTokIcon } from "./icons/tiktok-icon"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -229,7 +230,7 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   className="social-icon-btn tiktok-icon"
                 >
-                  <TikTok className="h-6 w-6" />
+                  <TikTokIcon className="h-6 w-6" />
                 </Link>
               </motion.div>
 
