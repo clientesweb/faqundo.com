@@ -599,7 +599,8 @@ export default function Podcast() {
                         className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors"
                       />
                     </Link>
-                    <Link href="https://www.tiktok.com/@bitacora_podcast" target="_blank" rel="noopener noreferrer">
+                    {/* Cambiar el enlace de TikTok del podcast al de Faqu */}
+                    <Link href="https://www.tiktok.com/@faquperez" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon
                         icon={faTiktok}
                         className="h-6 w-6 text-compass-green hover:text-compass-green/70 transition-colors"
