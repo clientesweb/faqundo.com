@@ -40,10 +40,10 @@ const donationPlatforms = [
 
 // Opciones de donación
 const donationOptions = [
-  { amount: 5, description: "Un café ☕" },
-  { amount: 10, description: "Combustible para la moto ⛽" },
-  { amount: 20, description: "Materiales para la casa 🏡" },
-  { amount: 50, description: "Equipo para videos 🎥" },
+  { amount: 500, description: "Un café ☕" },
+  { amount: 1300, description: "Combustible para la moto ⛽" },
+  { amount: 5000, description: "Materiales para la casa 🏡" },
+  { amount: 3000, description: "Equipo para videos 🎥" },
 ]
 
 // Datos bancarios
